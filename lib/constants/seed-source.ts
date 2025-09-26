@@ -1,3 +1,13 @@
+export type SeedSourceEntry = {
+  id: string;
+  question: string;
+  icon: string;
+  category: string;
+  yes: number;
+  no: number;
+  hoursAgo: number;
+};
+
 export const SEED_SOURCE = [
   {
     id: "tater-tots",
@@ -71,4 +81,4 @@ export const SEED_SOURCE = [
     no: 33,
     hoursAgo: 12,
   },
-] as const;
+] satisfies readonly SeedSourceEntry[];
